@@ -1,0 +1,12 @@
+{
+  "name": "dialog",
+  "version": "1.0.0",
+  "main": "main.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron main.js"
+  },
+  "devDependencies": {
+    "electron": "^22.0.0"
+  }
+}

@@ -1,0 +1,18 @@
+body {
+  background: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  background: #495057;
+}
+
+input {
+  width: 90%;
+  height: 90%;
+  border: 2px solid #212529;
+  outline: 2px solid #fff;
+  border-radius: 50px;
+  padding: 0 20px;
+  font-size: 20px;
+}
