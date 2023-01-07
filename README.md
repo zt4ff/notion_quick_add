@@ -1,5 +1,7 @@
 # Notion Quick Add
 
+![notion-quick-add-demo](./notion-quick-add.gif)
+
 ## Prerequisites to Make This Run
 
 - Bash
