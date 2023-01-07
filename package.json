@@ -7,6 +7,10 @@
     "start": "electron main.js"
   },
   "devDependencies": {
+    "dotenv": "^16.0.3",
     "electron": "^22.0.0"
+  },
+  "dependencies": {
+    "@notionhq/client": "^2.2.3"
   }
 }
