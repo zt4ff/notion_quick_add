@@ -45,20 +45,30 @@ const createWindow = () => {
   });
 
   win.loadFile("index.html");
+
+  return win;
 };
 
 app.whenReady().then(() => {
-  ipcMain.on("ping", (event, text) => {
-    console.log(text);
+  const win = createWindow();
 
+  let runningNotionQuery = false;
+
+  ipcMain.on("ping", (event, text) => {
+    runningNotionQuery = true;
     sendTicketToNotionDatabase(text).then((val) => {
       console.log(val);
       app.quit();
     });
+
+    win.close();
   });
-  createWindow();
 
   app.on("window-all-closed", () => {
-    app.quit();
+    // does not close the window is a query is runnning.
+    // the callback to query stops the application process
+    if (!runningNotionQuery) {
+      app.quit();
+    }
   });
 });
